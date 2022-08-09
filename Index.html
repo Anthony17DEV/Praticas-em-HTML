@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width">
+  <title>replit</title>
+  <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
+  <link href="style.css" rel="stylesheet" type="text/css" />
+</head>
+
+<body>
+  <button onclick="enviar"()">Qual a fruta?"</button>
+  <br /><br />
+  <div id="info">Fruta</div>
+  <br /><br />
+  <script src="script.js"></script>
+  <script>
+    function enviar(){
+      fruta = prompt();
+      $.post("urlpost.php", { fruta : fruta}, function(data))
+      {
+        $("#info").html(data)
+      } )
+    }
+  </script>
+</body>
+</html>
